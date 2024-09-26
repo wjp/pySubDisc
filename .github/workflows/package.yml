@@ -74,7 +74,7 @@ jobs:
         conda build conda
 
     - name: Upload wheel
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: pysubdisc-wheel
         path: |
@@ -83,7 +83,7 @@ jobs:
         retention-days: 2
 
     - name: Upload conda package
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: pysubdisc-conda
         path: /usr/share/miniconda/conda-bld/noarch/pysubdisc-${{ env.pysubdisc_version }}-py_*.tar.bz2
